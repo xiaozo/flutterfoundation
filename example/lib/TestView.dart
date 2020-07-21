@@ -56,7 +56,17 @@ void dispose() {
     color: Colors.red,
       child:  Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[Text("xxx"), Text('zzz')],
+        children: <Widget>[
+          Text("xxx"),
+          Text('zzz'),
+          FlatButton(
+            color: Colors.red,
+            child: Text("rm"),
+            textColor: Colors.blue,
+            onPressed: () {
+              removeFromSuperview();
+            },
+          )],
       ),
   );
   }

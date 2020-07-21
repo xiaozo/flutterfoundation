@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
 
 import 'Common/ViewBus.dart';
 import 'WidgetAdapter.dart';
@@ -15,6 +16,14 @@ class WidgetRmoveMixture {
     print("removeFromSuperview");
     if (viewBus != null && eventName != null) {
       viewBus.emit(eventName);
+    } else{
+      print("removeFromSuperview1");
+      try {
+        ZYGlobal.windowApp.removeWidget(this as Widget);
+      }catch(e) {
+       print(e);
+      }
+
     }
   }
 }

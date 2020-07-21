@@ -37,11 +37,7 @@ class _App extends BaseState<App>  {
       textColor: Colors.blue,
       onPressed: () {
 //        removeWidgetAdapter(widgetAdapter);
-        ZYGlobal.windowApp.addWidget(Image(
-          image: NetworkImage(
-              "https://pcdn.flutterchina.club/imgs/3-17.png"),
-          width: 50.0,
-        ));
+        ZYGlobal.windowApp.addWidget(TestView());
 
       },
     );
@@ -81,6 +77,7 @@ class _App extends BaseState<App>  {
 
   @override
   Widget build(BuildContext context) {
+    print("app build");
     //获取路由参数
 //    var args=ModalRoute.of(context).settings.arguments;
 //  print(args);
