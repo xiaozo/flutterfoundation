@@ -1,0 +1,22 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutterfoundation (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutterfoundation (from `.symlinks/plugins/flutterfoundation/ios`)
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutterfoundation:
+    :path: ".symlinks/plugins/flutterfoundation/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+  flutterfoundation: 5891310b9513893a9c7d583f87aede1ccd302b97
+
+PODFILE CHECKSUM: f32fb4e7c14f8b3ca19a369d7be425dd9241af27
+
+COCOAPODS: 1.9.1
