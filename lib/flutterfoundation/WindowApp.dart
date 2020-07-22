@@ -32,7 +32,7 @@ class WindowApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      
+
     MaterialApp materialApp =  this.windowAppCallback();
     return materialApp;
   }
@@ -108,7 +108,6 @@ class _WindowAppPageState  extends State <WindowAppPage>{
 
     });
 
-    print(_widgetElList.length);
     return Scaffold(
       backgroundColor: Colors.white,
       body:ConstrainedBox(

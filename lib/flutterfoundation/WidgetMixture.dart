@@ -16,14 +16,6 @@ class WidgetRmoveMixture {
     print("removeFromSuperview");
     if (viewBus != null && eventName != null) {
       viewBus.emit(eventName);
-    } else{
-      print("removeFromSuperview1");
-      try {
-        ZYGlobal.windowApp.removeWidget(this as Widget);
-      }catch(e) {
-       print(e);
-      }
-
     }
   }
 }

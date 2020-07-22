@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
 import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
 import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
+import 'package:flutterfoundation_example/LoginSuccess.dart';
 
+import 'Login.dart';
+import 'LoginConstrainedBox.dart';
+import 'LoginSuccess1.dart';
+import 'SuccessConstrainedBox.dart';
 import 'TestView.dart';
 
 
@@ -20,11 +25,14 @@ class App extends BaseStatefulWidget
 
   @override
   _App createState() => _App();
+
 }
 
 class _App extends BaseState<App>  {
 
+  static var i = 0;
   WidgetAdapter widgetAdapter;
+
 
   @override
   void didChangeDependencies() {
@@ -33,19 +41,47 @@ class _App extends BaseState<App>  {
 
     Widget widget =  FlatButton(
       color: Colors.red,
-      child: Text("open new route"),
+      child: Text("window.rootViewController"),
       textColor: Colors.blue,
       onPressed: () {
 //        removeWidgetAdapter(widgetAdapter);
-        ZYGlobal.windowApp.addWidget(TestView());
+//        ZYGlobal.windowApp.addWidget(TestView());
+//      Navigator.pop(context);
+//        Navigator.popUntil(context, ModalRoute.withName('Login'));
 
+        LoginSuccess newroute = LoginSuccess();
+        ZYGlobal.windowApp.setRootWidget(
+            SuccessConstrainedBox(
+              constraints: BoxConstraints.expand(),
+              child: Stack(
+                alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+                children:[ MaterialApp(
+                  routes:{
+                    "LoginSuccess":(context) => LoginSuccess(),
+                    "LoginSuccess1":(context) => LoginSuccess1(),
+                  },
+                  home:newroute ,
+                )],
+              ),
+            ));
       },
     );
 
-
-
     addSubView(WidgetAdapter(
         widgetEl:widget
+    ));
+
+    Widget widget2 =  FlatButton(
+      color: Colors.red,
+      child: Text("push"),
+      textColor: Colors.blue,
+      onPressed: () {
+        Navigator.of(context).pushNamed("App", arguments: "hi");
+      },
+    );
+
+    addSubView(WidgetAdapter(
+        widgetEl:widget2
     ));
 
 //    widget =  Positioned(child: TestView(),left: 30.0,top: 30.0,);

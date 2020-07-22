@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
+import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
 
 
 class TestView extends BaseStatefulWidget {
@@ -61,12 +62,21 @@ void dispose() {
           Text('zzz'),
           FlatButton(
             color: Colors.red,
-            child: Text("rm"),
+            child: Text("RM"),
             textColor: Colors.blue,
             onPressed: () {
               removeFromSuperview();
             },
-          )],
+          ),
+          FlatButton(
+            color: Colors.red,
+            child: Text("ADD"),
+            textColor: Colors.blue,
+            onPressed: () {
+              ZYGlobal.windowApp.addWidget(SizedBox(width: 100,height: 100,child: FlatButton( child: Text("Avvv"),color: Colors.red,),));
+            },
+          )
+        ],
       ),
   );
   }

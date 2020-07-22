@@ -16,15 +16,21 @@ void main() {
           return MaterialApp(
             title: 'Flutter Demo',
             theme: ThemeData(
-              primarySwatch: Colors.blue,
+              primarySwatch: Colors.red,
               visualDensity: VisualDensity.adaptivePlatformDensity,
             ),
-            routes:{
-              "Login":(context) => Login(),
-              "App":(context) => App(),
-            },
+//            routes:{
+//              "Login":(context) => Login(),
+//              "App":(context) => App(),
+//            },
             home: WindowAppPage(
-                rootWidget:newroute
+                rootWidget:MaterialApp(
+                    routes:{
+                      "Login":(context) => Login(),
+                      "App":(context) => App(),
+                    },
+                  home:newroute ,
+                )
             ),
           );
         });
