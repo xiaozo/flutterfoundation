@@ -4,13 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
 import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
-import 'package:flutterfoundation_example/LoginSuccess.dart';
+import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
+import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
+import 'package:flutterfoundation_example/widgets/TestView.dart';
 
 import 'Login.dart';
-import 'LoginConstrainedBox.dart';
+
+import 'LoginSuccess.dart';
 import 'LoginSuccess1.dart';
-import 'SuccessConstrainedBox.dart';
-import 'TestView.dart';
 
 
 
@@ -44,44 +45,12 @@ class _App extends BaseState<App>  {
       child: Text("window.rootViewController"),
       textColor: Colors.blue,
       onPressed: () {
-//        removeWidgetAdapter(widgetAdapter);
-//        ZYGlobal.windowApp.addWidget(TestView());
-//      Navigator.pop(context);
-//        Navigator.popUntil(context, ModalRoute.withName('Login'));
-
-        LoginSuccess newroute = LoginSuccess();
-        Application.windowApp.setRootWidget(
-            SuccessConstrainedBox(
-              constraints: BoxConstraints.expand(),
-              child: Stack(
-                alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
-                children:[ MaterialApp(
-                  routes:{
-                    "LoginSuccess":(context) => LoginSuccess(),
-                    "LoginSuccess1":(context) => LoginSuccess1(),
-                  },
-                  home:newroute ,
-                )],
-              ),
-            ));
+        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginSuccessWidget());
       },
     );
 
     addSubView(WidgetAdapter(
         widgetEl:widget
-    ));
-
-    Widget widget2 =  FlatButton(
-      color: Colors.red,
-      child: Text("push"),
-      textColor: Colors.blue,
-      onPressed: () {
-        Navigator.of(context).pushNamed("App", arguments: "hi");
-      },
-    );
-
-    addSubView(WidgetAdapter(
-        widgetEl:widget2
     ));
 
 //    widget =  Positioned(child: TestView(),left: 30.0,top: 30.0,);

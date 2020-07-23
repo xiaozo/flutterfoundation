@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
 import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
-
+import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
+import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
+import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
 import 'App.dart';
 import 'Login.dart';
-import 'LoginConstrainedBox.dart';
 
 class LoginSuccess1 extends BaseStatefulWidget
 {
@@ -25,31 +26,17 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
   String str = "ABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEF";
 
   @override
-  void didChangeDependencies() {
-    print("didChangeDependencies");
-    super.didChangeDependencies();
+  void initState() {
+    // TODO: implement initState
+    super.initState();
 
-
-//
+    print("initState");
     Widget widget2 =  FlatButton(
       color: Colors.red,
       child: Text("LOGIN"),
       textColor: Colors.blue,
       onPressed: () {
-        App newroute = App();
-        Application.windowApp.setRootWidget( LoginConstrainedBox(
-          constraints: BoxConstraints.expand(),
-          child: Stack(
-            alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
-            children:[ MaterialApp(
-              routes:{
-                "Login":(context) => Login(),
-                "App":(context) => App(),
-              },
-              home:newroute ,
-            )],
-          ),
-        ));
+        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginWidget());
 
       },
     );
@@ -61,7 +48,11 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     addSubView(WidgetAdapter(
         widgetEl:widget2
     ));
-
+  }
+  @override
+  void didChangeDependencies() {
+    print("didChangeDependencies");
+    super.didChangeDependencies();
 
 
   }

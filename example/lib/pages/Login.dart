@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
+import 'package:flutterfoundation_example/route/LoginRoutes.dart';
+import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
 
 class Login extends StatelessWidget
 {
@@ -10,6 +11,9 @@ class Login extends StatelessWidget
   }) : super(key: key);
   final String text;
 
+  void __test() {
+//    Application.getIt<NavigateService>().pushNamed("App", arguments: "hi");
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,10 +34,15 @@ class Login extends StatelessWidget
               child: Text("open new route"),
               textColor: Colors.blue,
               onPressed: () {
-//                App newroute = App();
-//                ZYGlobal.windowApp.setRootWidget(newroute);
-                //导航到新路由
-                Navigator.of(context).pushNamed("App", arguments: "hi");
+                NavigatorUtil.goAppPage(context);
+
+              },
+            ),
+            FlatButton(
+              child: Text("test btn"),
+              textColor: Colors.blue,
+              onPressed: () {
+                __test();
 
               },
             ),

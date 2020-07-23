@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/Application.dart';
-
+import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
+import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
 class LoginSuccess extends StatelessWidget
 {
 
@@ -31,8 +32,14 @@ class LoginSuccess extends StatelessWidget
               onPressed: () {
 //                App newroute = App();
 //                ZYGlobal.windowApp.setRootWidget(newroute);
-                //导航到新路由
-                Navigator.of(context).pushNamed("LoginSuccess1", arguments: "hi");
+                NavigatorUtil.goSuccess1Page(context);
+              },
+            ),
+            FlatButton(
+              child: Text("test btn"),
+              textColor: Colors.blue,
+              onPressed: () {
+                Application.getIt<SuccessNavigateService>().pushNamed("LoginSuccess1", arguments: "hi");
 
               },
             ),
