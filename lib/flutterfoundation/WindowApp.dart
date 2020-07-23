@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'BaseState.dart';
-import 'Common/ZYGlobal.dart';
+import 'Application.dart';
 
 
 typedef MaterialApp WindowAppCallback();
@@ -19,15 +18,15 @@ class WindowApp extends StatelessWidget {
   final WindowAppCallback windowAppCallback;
 
    void setRootWidget(Widget rootWidget) {
-    ZYGlobal.eventBus.emit("setRootWidget",rootWidget);
+     Application.eventBus.emit("setRootWidget",rootWidget);
   }
 
   void addWidget(Widget widget) {
-    ZYGlobal.eventBus.emit("addWidget",widget);
+    Application.eventBus.emit("addWidget",widget);
   }
 
   void removeWidget(Widget widget) {
-    ZYGlobal.eventBus.emit("removeWidget",widget);
+    Application.eventBus.emit("removeWidget",widget);
   }
 
   @override
@@ -66,7 +65,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
     super.initState();
     _rootWidget = widget.rootWidget;
 
-    ZYGlobal.eventBus.on("setRootWidget", (arg) {
+    Application.eventBus.on("setRootWidget", (arg) {
       // do something
       debugPrint("onsetRootWidget");
       setState(() {
@@ -74,7 +73,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
        });
     });
 
-    ZYGlobal.eventBus.on("addWidget", (arg) {
+    Application.eventBus.on("addWidget", (arg) {
       // do something
       debugPrint("addWidget");
       setState(() {
@@ -82,7 +81,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
       });
     });
 
-    ZYGlobal.eventBus.on("removeWidget", (arg) {
+    Application.eventBus.on("removeWidget", (arg) {
       // do something
       debugPrint("removeWidget");
       setState(() {

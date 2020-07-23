@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
+import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation/flutterfoundation/WindowApp.dart';
 
 import 'App.dart';
 import 'Login.dart';
+import 'LoginConstrainedBox.dart';
 
 void main() {
-  ZYGlobal.init().then((e) {
+  Application.init().then((e) {
     Login newroute = Login();
     Widget windowApp = WindowApp(
         windowAppCallback:(){
@@ -24,18 +25,24 @@ void main() {
 //              "App":(context) => App(),
 //            },
             home: WindowAppPage(
-                rootWidget:MaterialApp(
-                    routes:{
-                      "Login":(context) => Login(),
-                      "App":(context) => App(),
-                    },
-                  home:newroute ,
+                rootWidget:LoginConstrainedBox(
+                  constraints: BoxConstraints.expand(),
+                  child: Stack(
+                    alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+                    children:[ MaterialApp(
+                      routes:{
+                        "Login":(context) => Login(),
+                        "App":(context) => App(),
+                      },
+                      home:newroute ,
+                    )],
+                  ),
                 )
             ),
           );
         });
-    ZYGlobal.windowApp = windowApp;
-    runApp(ZYGlobal.windowApp);
+    Application.windowApp = windowApp;
+    runApp(Application.windowApp);
 
   });
 

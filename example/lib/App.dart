@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
-import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
+import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
 import 'package:flutterfoundation_example/LoginSuccess.dart';
 
@@ -50,7 +50,7 @@ class _App extends BaseState<App>  {
 //        Navigator.popUntil(context, ModalRoute.withName('Login'));
 
         LoginSuccess newroute = LoginSuccess();
-        ZYGlobal.windowApp.setRootWidget(
+        Application.windowApp.setRootWidget(
             SuccessConstrainedBox(
               constraints: BoxConstraints.expand(),
               child: Stack(

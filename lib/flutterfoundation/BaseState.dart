@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-
 import 'WidgetMixture.dart';
 
 class BaseStatefulWidget extends StatefulWidget with WidgetRmoveMixture {
@@ -17,7 +16,6 @@ class BaseState <T extends BaseStatefulWidget> extends State <T> with WidgetMixt
   @override
   void dispose() {
     debugPrint("dispose");
-    print(bus);
     super.dispose();
   }
 

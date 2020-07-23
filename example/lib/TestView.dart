@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
-import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
+import 'package:flutterfoundation/flutterfoundation/Application.dart';
+import 'package:flutterfoundation/flutterfoundation/Animations/AnimationMixture.dart';
+import 'package:flutterfoundation/flutterfoundation/Common/EventBus.dart';
 
 
 class TestView extends BaseStatefulWidget {
@@ -9,21 +11,34 @@ class TestView extends BaseStatefulWidget {
   _TestViewState createState() => _TestViewState();
 }
 
-class _TestViewState extends BaseState<TestView> with SingleTickerProviderStateMixin{
+class _TestViewState extends BaseState<TestView> with SingleTickerProviderStateMixin,AnimationMixture<double>{
 
-  Animation<double> animation;
-  AnimationController controller;
 
   initState() {
     super.initState();
-    controller = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 2),
-    );
-    animation = Tween(
+
+    setupFadeTransition(Duration(milliseconds: 200), Tween(
       begin: 0.0,
       end: 1.0,
-    ).animate(controller);
+    ),this);
+
+    controller.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        //动画从 controller.forward() 正向执行 结束时会回调此方法
+        print("status is completed");
+        //反向执行
+      } else if (status == AnimationStatus.dismissed) {
+        //动画从 controller.reverse() 反向执行 结束时会回调此方法
+        print("status is dismissed");
+        //controller.forward();
+      } else if (status == AnimationStatus.forward) {
+        print("status is forward");
+        //执行 controller.forward() 会回调此状态
+      } else if (status == AnimationStatus.reverse) {
+        //执行 controller.reverse() 会回调此状态
+        print("status is reverse");
+      }
+    });
 
 
   }
@@ -34,6 +49,7 @@ void dispose() {
 }
   @override
   Widget build(BuildContext context) {
+    print("TestView build");
 //    return new Center(
 //      child: Image(
 //        image: NetworkImage(
@@ -43,15 +59,15 @@ void dispose() {
 //      ),
 //    );
 
-//    controller.forward();
-//    return FadeTransition(
-//      child: Container(
-//        color: Colors.red,
-//        width: 200.0,
-//        height: 200.0,
-//      ),
-//      opacity: animation,
-//    );
+    controller.forward();
+    return FadeTransition(
+      child: Container(
+        color: Colors.blue,
+        width: 200.0,
+        height: 200.0,
+      ),
+      opacity: animation,
+    );
 
   return Container(
     color: Colors.red,
@@ -73,7 +89,14 @@ void dispose() {
             child: Text("ADD"),
             textColor: Colors.blue,
             onPressed: () {
-              ZYGlobal.windowApp.addWidget(SizedBox(width: 100,height: 100,child: FlatButton( child: Text("Avvv"),color: Colors.red,),));
+              Application.windowApp.addWidget(
+                  FadeTransition(opacity: controller,child:SizedBox(width: 100,height: 100,child: FlatButton( child: Text("Avvv"),color: Colors.red,)))
+              );
+              controller.forward();
+//            setState(() {
+//
+//            });
+
             },
           )
         ],

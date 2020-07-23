@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/Common/ZYGlobal.dart';
+import 'package:flutterfoundation/flutterfoundation/Application.dart';
 
 class Login extends StatelessWidget
 {

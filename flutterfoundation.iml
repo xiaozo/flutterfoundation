@@ -17,10 +17,6 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/build" />
-      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/build/app/intermediates/flutter/debug/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/build/app/intermediates/merged_assets/debug/out/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/build/ios/Debug-iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/build/ios/iphonesimulator/Runner.app/Frameworks/App.framework/flutter_assets/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/ios/Flutter/App.framework/flutter_assets/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/App.framework/flutter_assets/packages" />
     </content>
