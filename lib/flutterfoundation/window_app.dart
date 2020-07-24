@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'application.dart';
 
 
-typedef MaterialApp WindowAppCallback();
+typedef Widget WindowAppCallback();
 
 class WindowApp extends StatelessWidget {
 
@@ -32,7 +32,7 @@ class WindowApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    MaterialApp materialApp =  this.windowAppCallback();
+    Widget materialApp =  this.windowAppCallback();
     return materialApp;
   }
 
@@ -44,6 +44,9 @@ class WindowAppPage extends StatefulWidget {
     this.rootWidget
   }): super(key: key);
   final Widget rootWidget;
+
+  final TextDirection textDirection =TextDirection.ltr;
+
 
   @override
   _WindowAppPageState createState() => _WindowAppPageState();
@@ -107,15 +110,20 @@ class _WindowAppPageState  extends State <WindowAppPage>{
 
     });
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body:ConstrainedBox(
-        constraints: BoxConstraints.expand(),
-        child: Stack(
-          alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
-          children:widgetList,
-        ),
+//    return Scaffold(
+//      backgroundColor: Colors.white,
+//      body:Stack(
+//        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+//        children:widgetList,
+//      ),
+//    );
+
+    return Directionality(
+      child: Stack(
+        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+        children:widgetList,
       ),
+      textDirection: widget.textDirection,
     );
   }
 }

@@ -27,6 +27,12 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     super.initState();
 
     print("initState");
+
+
+    addSubView(WidgetAdapter(
+        widgetEl:list
+    ));
+
     Widget widget2 =  FlatButton(
       color: Colors.red,
       child: Text("LOGIN"),
@@ -36,13 +42,24 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
 
       },
     );
-
-    addSubView(WidgetAdapter(
-        widgetEl:list
-    ));
-
     addSubView(WidgetAdapter(
         widgetEl:widget2
+    ));
+
+
+    Widget widget3 =   Positioned(left: 0,child:FlatButton(
+      color: Colors.red,
+      child: Text("reload"),
+      textColor: Colors.blue,
+      onPressed: () {
+        setState(() {
+
+        });
+
+      },
+    ) ,); ;
+    addSubView(WidgetAdapter(
+        widgetEl:widget3
     ));
   }
   @override

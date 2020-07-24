@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
+import 'package:flutterfoundation_example/route/SuccessRoutes.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
 class LoginSuccess extends StatelessWidget
 {
@@ -39,7 +40,7 @@ class LoginSuccess extends StatelessWidget
               child: Text("test btn"),
               textColor: Colors.blue,
               onPressed: () {
-                Application.getIt<SuccessNavigateService>().pushNamed("LoginSuccess1", arguments: "hi");
+                Application.getIt<SuccessNavigateService>().pushNamed(SuccessRoutes.loginSuccess1, arguments: "hi");
 
               },
             ),
