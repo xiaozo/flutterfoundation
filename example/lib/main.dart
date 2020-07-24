@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
-import 'package:flutterfoundation/flutterfoundation/WindowApp.dart';
-import 'package:flutterfoundation_example/pages/App.dart';
-import 'package:flutterfoundation_example/pages/Login.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/flutterfoundation/window_app.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
-import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
+import 'package:flutterfoundation_example/untils/navigator_util.dart';
 
 
 void main() {

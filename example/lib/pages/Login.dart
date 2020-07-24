@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
-import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
+import 'package:flutterfoundation_example/untils/navigator_util.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/system/appbar_gradient.dart';
 
 class Login extends StatelessWidget
 {
@@ -18,8 +19,18 @@ class Login extends StatelessWidget
   Widget build(BuildContext context) {
     return Scaffold(
 
-      appBar: AppBar(
-          title:Text("login"),
+      appBar: GradientAppBar(
+//        leading:Text("login") ,
+      leadings: <Widget>[
+        IconButton(icon: Icon(Icons.menu),onPressed: (){},),
+        Text("item"),
+        IconButton(icon: Icon(Icons.menu),onPressed: (){},),
+      ],
+        actions: <Widget>[
+          IconButton(icon: Icon(Icons.menu),onPressed: (){},),
+          Text("item"),
+        ],
+          title:Text("lglogilgloginlolgloginlolgloginlolgloginlolgloginlolgloginlolgloginlonlo"),
       ),
       body: Center(
         child: Column(
@@ -46,6 +57,24 @@ class Login extends StatelessWidget
 
               },
             ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: kToolbarHeight,
+              child: Container(
+              color: Colors.blue,
+              child: Flex(
+                direction: Axis.horizontal,
+                  mainAxisAlignment:MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  //left
+                  Text("leleftleftleftft"),
+                  Text("centecentercentercentercenterr"),
+                  Text(""),
+
+                ],
+              ) ,),),
+
+
           ],
         ),
       ),

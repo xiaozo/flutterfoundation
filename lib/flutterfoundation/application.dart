@@ -1,11 +1,11 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
+import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'WindowApp.dart';
-import 'Common/EventBus.dart';
+import 'window_app.dart';
+import 'Common/event_bus.dart';
 
 typedef ApplicationInitHandle ();
 

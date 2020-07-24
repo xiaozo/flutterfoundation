@@ -1,11 +1,10 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
-import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
-import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
-import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
+import 'package:flutterfoundation_example/untils/navigator_util.dart';
 import 'package:flutterfoundation_example/widgets/TestView.dart';
 
 import 'Login.dart';
@@ -54,11 +53,15 @@ class _App extends BaseState<App>  {
     ));
 
 //    widget =  Positioned(child: TestView(),left: 30.0,top: 30.0,);
+
     widget =  SizedBox(
       width: 400,
       height: 80.0,
       child: TestView(),
     );
+
+    widget = TestView();
+
     widgetAdapter = WidgetAdapter(
         widgetEl:widget
     );
@@ -104,7 +107,7 @@ class _App extends BaseState<App>  {
       appBar: AppBar(
         title:Text("app"),
       ),
-      body: widgetBody
+      body: bodyWidget()
     );
   }
 }

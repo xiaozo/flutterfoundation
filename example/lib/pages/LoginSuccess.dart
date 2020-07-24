@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/Application.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
-import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
+import 'package:flutterfoundation_example/untils/navigator_util.dart';
 class LoginSuccess extends StatelessWidget
 {
 

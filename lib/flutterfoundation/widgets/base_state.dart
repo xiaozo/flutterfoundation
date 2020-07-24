@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'WidgetMixture.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/widget_mixture.dart';
 
 class BaseStatefulWidget extends StatefulWidget with WidgetRmoveMixture {
 

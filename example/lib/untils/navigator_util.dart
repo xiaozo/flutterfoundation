@@ -1,11 +1,11 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation_example/pages/Login.dart';
 import 'package:flutterfoundation_example/pages/LoginSuccess.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
-import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
+import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart';
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
 import 'package:flutterfoundation_example/route/SuccessRoutes.dart';
 

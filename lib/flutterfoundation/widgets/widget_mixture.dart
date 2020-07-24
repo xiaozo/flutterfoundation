@@ -1,9 +1,9 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
+import 'package:flutterfoundation/flutterfoundation/Common/view_bus.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
 
-import 'Common/ViewBus.dart';
-import 'WidgetAdapter.dart';
+import 'widget_adapter.dart';
 
 
 typedef Widget ChildbodyWidgetBlock( List<Widget> widgets);

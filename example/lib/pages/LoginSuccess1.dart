@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
-import 'package:flutterfoundation/flutterfoundation/WidgetAdapter.dart';
-import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
-import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
-import 'package:flutterfoundation_example/untils/NavigatorUtil.dart';
-import 'App.dart';
-import 'Login.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
+import 'package:flutterfoundation_example/untils/navigator_util.dart';
 
 class LoginSuccess1 extends BaseStatefulWidget
 {

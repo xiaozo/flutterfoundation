@@ -1,4 +1,4 @@
-import 'package:flutterfoundation/flutterfoundation/routes/NavigateService.dart';
+import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart';
 import 'package:flutter/material.dart';
 
 class SuccessNavigateService extends NavigateService{

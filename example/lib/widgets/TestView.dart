@@ -1,9 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutterfoundation/flutterfoundation/BaseState.dart';
-import 'package:flutterfoundation/flutterfoundation/Application.dart';
-import 'package:flutterfoundation/flutterfoundation/Animations/AnimationMixture.dart';
-import 'package:flutterfoundation/flutterfoundation/Common/EventBus.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/flutterfoundation/Animations/animation_mixture.dart';
 
 
 class TestView extends BaseStatefulWidget {
@@ -17,7 +16,7 @@ class _TestViewState extends BaseState<TestView> with SingleTickerProviderStateM
   initState() {
     super.initState();
 
-    setupFadeTransition(Duration(milliseconds: 200), Tween(
+    setupFadeTransition(Duration(milliseconds: 300), Tween(
       begin: 0.0,
       end: 1.0,
     ),this);
@@ -60,13 +59,17 @@ void dispose() {
 //    );
 
     controller.forward();
-    return FadeTransition(
-      child: Container(
-        color: Colors.blue,
-        width: 200.0,
-        height: 200.0,
+   ;
+    return  Positioned(
+      left: 0,
+      child: FadeTransition(
+        child: Container(
+          color: Colors.blue,
+          width: 200.0,
+          height: 200.0,
+        ),
+        opacity: animation,
       ),
-      opacity: animation,
     );
 
   return Container(
