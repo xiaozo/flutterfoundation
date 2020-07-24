@@ -6,8 +6,8 @@ import 'dart:math' as math;
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart';
 
-import '../../foundation_config_until.dart';
 
 
 /// [NavigationToolbar] is a layout helper to position 3 widgets or groups of

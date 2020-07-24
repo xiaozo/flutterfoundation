@@ -5,10 +5,11 @@ import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation/flutterfoundation/window_app.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
-
+import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart';
 
 void main() {
-  Application.init((){
+  Application.init(
+      applicationInitHandle:(){
     Application.getIt.registerSingleton(SuccessNavigateService());
   }).then((e) {
     Widget rootWidget = NavigatorUtil.rootLoginWidget();

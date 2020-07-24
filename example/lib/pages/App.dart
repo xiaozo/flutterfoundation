@@ -6,11 +6,7 @@ import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
 import 'package:flutterfoundation_example/widgets/TestView.dart';
-
-import 'Login.dart';
-
-import 'LoginSuccess.dart';
-import 'LoginSuccess1.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/system/appbar_gradient.dart';
 
 
 
@@ -30,7 +26,6 @@ class App extends BaseStatefulWidget
 
 class _App extends BaseState<App>  {
 
-  static var i = 0;
   WidgetAdapter widgetAdapter;
 
 
@@ -104,7 +99,7 @@ class _App extends BaseState<App>  {
     });
     return Scaffold(
 
-      appBar: AppBar(
+      appBar: GradientAppBar(
         title:Text("app"),
       ),
       body: bodyWidget()
