@@ -22,17 +22,15 @@ class Application {
   //初始化全局信息，会在APP启动时执行
   static Future init(
       {
-        ApplicationInitHandle applicationInitHandle = null,
+        ///参数配置文件  如控件的一些颜色 间距
         FoundationConfig foundationConfig = null,
       }) async {
 //    sp = await SharedPreferences.getInstance();
     eventBus = new EventBus();
     getIt.registerSingleton(NavigateService());
     if (foundationConfig == null) foundationConfig = FoundationConfig();
-    
-    getIt.registerSingleton(foundationConfig);
 
-    if (applicationInitHandle != null) applicationInitHandle();
+    getIt.registerSingleton(foundationConfig);
 
   }
 

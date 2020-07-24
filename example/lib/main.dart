@@ -8,10 +8,10 @@ import 'package:flutterfoundation_example/untils/navigator_util.dart';
 import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart';
 
 void main() {
-  Application.init(
-      applicationInitHandle:(){
+  Application.init().then((e) {
+
     Application.getIt.registerSingleton(SuccessNavigateService());
-  }).then((e) {
+
     Widget rootWidget = NavigatorUtil.rootLoginWidget();
     Widget windowApp = WindowApp(windowAppCallback: () {
       return MaterialApp(
