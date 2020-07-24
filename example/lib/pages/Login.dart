@@ -58,22 +58,6 @@ class Login extends StatelessWidget
 
               },
             ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width,
-              height: kToolbarHeight,
-              child: Container(
-              color: Colors.blue,
-              child: Flex(
-                direction: Axis.horizontal,
-                  mainAxisAlignment:MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  //left
-                  Text("leleftleftleftft"),
-                  Text("centecentercentercentercenterr"),
-                  Text(""),
-
-                ],
-              ) ,),),
 
 
           ],

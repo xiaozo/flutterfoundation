@@ -625,7 +625,8 @@ class _AppBarState extends State<GradientAppBar> {
       leading: leading,
       middle: title,
       trailing: actions,
-      centerMiddle: widget._getEffectiveCenterTitle(theme),
+//      centerMiddle: widget._getEffectiveCenterTitle(theme),
+      centerMiddle:true,
       middleSpacing: widget.titleSpacing,
     );
 
