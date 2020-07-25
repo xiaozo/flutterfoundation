@@ -110,20 +110,20 @@ class _WindowAppPageState  extends State <WindowAppPage>{
 
     });
 
-//    return Scaffold(
-//      backgroundColor: Colors.white,
-//      body:Stack(
-//        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
-//        children:widgetList,
-//      ),
-//    );
-
-    return Directionality(
-      child: Stack(
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body:Stack(
         alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
         children:widgetList,
       ),
-      textDirection: widget.textDirection,
     );
+
+//    return Directionality(
+//      child: Stack(
+//        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+//        children:widgetList,
+//      ),
+//      textDirection: widget.textDirection,
+//    );
   }
 }

@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/system/appbar_gradient.dart';
@@ -14,11 +16,19 @@ class Login extends StatelessWidget
   }) : super(key: key);
   final String text;
 
-  void __test() {
+  void __test(BuildContext context) {
+
 //    Application.getIt<NavigateService>().pushNamed("App", arguments: "hi");
+//    Application.windowApp.addWidget(IconButton(icon: Icon(Icons.menu),onPressed: (){}));
+    EasyLoading.show(status: 'loading...');
+//    EasyLoading.showSuccess('Great Success!');
+
   }
   @override
   Widget build(BuildContext context) {
+
+//    EasyLoading.instance.context = context;
+
     return Scaffold(
 
       appBar: GradientAppBar(
@@ -55,7 +65,7 @@ class Login extends StatelessWidget
               child: Text("test btn"),
               textColor: Colors.blue,
               onPressed: () {
-                __test();
+                __test(context);
 
               },
             ),

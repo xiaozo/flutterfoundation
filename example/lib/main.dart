@@ -13,7 +13,6 @@ void main() {
     Application.getIt.registerSingleton(SuccessNavigateService());
     Widget rootWidget = NavigatorUtil.rootLoginWidget();
     Widget windowApp = WindowApp(windowAppCallback: () {
-
       return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
