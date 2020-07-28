@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
+import 'package:flutterfoundation/generated/l10n.dart';
 import 'package:flutterfoundation_example/pages/register.dart';
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
@@ -59,7 +60,7 @@ class _LoginState extends BaseState<Login>
           IconButton(icon: Icon(Icons.menu),onPressed: (){},),
           Text("item"),
         ],
-        title:Text("lglnlonlo"),
+        title:Text(S.of(context).denglu),
       ),
       body: Center(
         child: Column(

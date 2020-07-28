@@ -2,6 +2,7 @@
 import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/generated/l10n.dart';
 import 'package:flutterfoundation_example/pages/Login.dart';
 import 'package:flutterfoundation_example/pages/LoginSuccess.dart';
 import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
@@ -9,6 +10,7 @@ import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
 import 'package:flutterfoundation_example/route/SuccessRoutes.dart';
 import 'package:flutter_page_tracker/flutter_page_tracker.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 const String LOGINROUTERID = "LOGINROUTERID";
 const String LOGINSUCCESSROUTERID = "LOGINSUCCESSROUTERID";
@@ -47,6 +49,19 @@ class NavigatorUtil {
       alignment: Alignment.center, //指定未定位或部分定位widget的对齐方式
       children: [
         MaterialApp(
+          localizationsDelegates: const [
+            S.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate
+            // 本地化的代理类
+          ],
+//      supportedLocales: S.delegate.supportedLocales,
+          // 设置中文为首选项
+          supportedLocales: const <Locale>[
+            Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),
+            Locale.fromSubtags(languageCode: 'en'),
+          ],
           navigatorKey: Application.getIt<NavigateService>().key,
           home: newroute,
           onGenerateRoute: router.generator,
