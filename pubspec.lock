@@ -44,7 +44,7 @@ packages:
     source: hosted
     version: "1.14.12"
   common_utils:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: common_utils
       url: "https://pub.flutter-io.cn"
@@ -104,6 +104,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_page_tracker:
+    dependency: "direct main"
+    description:
+      name: flutter_page_tracker
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.2.3"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.1.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter

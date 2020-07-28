@@ -39,7 +39,7 @@ class _App extends BaseState<App>  {
       child: Text("window.rootViewController"),
       textColor: Colors.blue,
       onPressed: () {
-        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginSuccessWidget());
+        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginSuccessWidget(context));
       },
     );
 

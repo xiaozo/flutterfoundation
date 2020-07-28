@@ -3,6 +3,7 @@ import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
 import 'package:flutterfoundation_example/untils/navigator_util.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginSuccess1 extends BaseStatefulWidget
 {
@@ -19,7 +20,7 @@ class LoginSuccess1 extends BaseStatefulWidget
 class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderStateMixin {
 
   WidgetAdapter widgetAdapter;
-  String str = "ABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCDEF";
+  String str = "ABCDEFABCDEFABCDEFABCDEFABBCDEFABCDEFABCDEF";
 
   @override
   void initState() {
@@ -38,7 +39,7 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
       child: Text("LOGIN"),
       textColor: Colors.blue,
       onPressed: () {
-        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginWidget());
+        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginWidget(context));
 
       },
     );
@@ -47,7 +48,7 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     ));
 
 
-    Widget widget3 =   Positioned(left: 0,child:FlatButton(
+    Widget widget3 =   Positioned(left: 0,bottom: 0,child:FlatButton(
       color: Colors.red,
       child: Text("reload"),
       textColor: Colors.blue,
@@ -113,17 +114,13 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     );
   }
 
-  @override
+//  @override
 //  Widget build(BuildContext context) {
 //    print("_LoginSuccess1 build");
 //    //获取路由参数
 ////    var args=ModalRoute.of(context).settings.arguments;
 ////  print(args);
 //    Widget widgetBody  = bodyWidgetBychildbodyWidgetBlock((List<Widget> widgets){
-////      return Column(
-////        crossAxisAlignment: CrossAxisAlignment.start,
-////          children:widgets
-////      );
 //      return Container(
 //        color: Colors.red,
 //        child:Column(
@@ -143,12 +140,6 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
 
   Widget build(BuildContext context){
     print("build  loginsuccess1");
-    return Scaffold(
-
-        appBar: AppBar(
-          title:Text("loginsuccess1"),
-        ),
-        body: bodyWidget()
-    );
+    return bodyWidget();
   }
 }

@@ -8,6 +8,13 @@ import 'widget_adapter.dart';
 
 typedef Widget ChildbodyWidgetBlock( List<Widget> widgets);
 
+///工具
+mixin WidgetToolMixture<T extends StatefulWidget> on State<T> {
+     void endEditing (){
+       FocusScope.of(context).requestFocus(new FocusNode());
+     }
+}
+
 class WidgetRmoveMixture {
   ViewBus viewBus;
   Object eventName;
@@ -27,7 +34,6 @@ class WidgetRmoveMixture {
   }
 }
 
-
 class WidgetMixture {
 
   @protected
@@ -45,6 +51,43 @@ class WidgetMixture {
     update();
   }
 
+  void bringTopSubviewToFront(WidgetAdapter widgetAdapter) {
+    if (widgetTopElList.indexOf(widgetAdapter) != -1) {
+      widgetTopElList.remove(widgetAdapter);
+      widgetTopElList.add(widgetAdapter);
+      update();
+    }
+
+  }
+
+  void sendTopSubviewToBack(WidgetAdapter widgetAdapter) {
+    if (widgetTopElList.indexOf(widgetAdapter) != -1) {
+      widgetTopElList.remove(widgetAdapter);
+      widgetTopElList.insert(0, widgetAdapter);
+      update();
+    }
+
+  }
+
+
+  void bringSubviewToFront(WidgetAdapter widgetAdapter) {
+    if (widgetElList.indexOf(widgetAdapter) != -1) {
+      widgetElList.remove(widgetAdapter);
+      widgetElList.add(widgetAdapter);
+      update();
+    }
+
+  }
+
+  void sendSubviewToBack(WidgetAdapter widgetAdapter) {
+    if (widgetElList.indexOf(widgetAdapter) != -1) {
+      widgetElList.remove(widgetAdapter);
+      widgetElList.insert(0, widgetAdapter);
+      update();
+    }
+
+  }
+
   Widget bodyWidgetBychildbodyWidgetBlock (ChildbodyWidgetBlock childbodyWidgetblock){
     List<Widget> widgets = __getWidgets(widgetElList);
     List<Widget> topwidgets = __getWidgets(widgetTopElList);
@@ -53,11 +96,12 @@ class WidgetMixture {
     return  ConstrainedBox(
       constraints: BoxConstraints.expand(),
       child: Stack(
-        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+        alignment:Alignment.topLeft , //指定未定位或部分定位widget的对齐方式
         children: topwidgets,
       ),
     );
   }
+
   Widget bodyWidget () {
     widgetTopElList = widgetElList;
     List<Widget> widgets = __getWidgets(widgetElList);
@@ -65,7 +109,7 @@ class WidgetMixture {
       constraints: BoxConstraints.expand(),
       child: Stack(
 //        fit: StackFit.expand, //未定位widget占满Stack整个空间
-        alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
+        alignment:Alignment.topLeft , //指定未定位或部分定位widget的对齐方式
         children: widgets,
       ),
     );

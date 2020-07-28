@@ -5,7 +5,7 @@ import 'package:uuid/uuid.dart';
 * Widget加入主视图的适配模型
 * */
 class WidgetAdapter {
-  Object eventName = Uuid();
+  Object eventName = Uuid().v1();
 
   ///Widget 或者生成Widget的函数
   dynamic widgetEl;

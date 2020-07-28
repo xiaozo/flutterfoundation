@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'application.dart';
 
 
-typedef Widget WindowAppCallback();
+typedef Widget WindowAppRootCallback(BuildContext context);
 
 class WindowApp extends StatelessWidget {
 
@@ -12,10 +12,10 @@ class WindowApp extends StatelessWidget {
   WindowApp({
     Key key,
     @required
-    this.windowAppCallback,
+    this.windowAppRootCallback,
   }) : super(key: key);
   
-  final WindowAppCallback windowAppCallback;
+  final WindowAppRootCallback windowAppRootCallback;
 
    void setRootWidget(Widget rootWidget) {
      Application.eventBus.emit("setRootWidget",rootWidget);
@@ -31,9 +31,13 @@ class WindowApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+     return MaterialApp(
+       home: WindowAppPage(
+           windowAppRootCallback: this.windowAppRootCallback),
+     );
 
-    Widget materialApp =  this.windowAppCallback();
-    return materialApp;
+//    Widget materialApp =  this.windowAppCallback();
+//    return materialApp;
   }
 
 }
@@ -41,9 +45,10 @@ class WindowApp extends StatelessWidget {
 class WindowAppPage extends StatefulWidget {
   WindowAppPage({Key key,
     @required
-    this.rootWidget
+    this.windowAppRootCallback
   }): super(key: key);
-  final Widget rootWidget;
+
+  final WindowAppRootCallback windowAppRootCallback;
 
   final TextDirection textDirection =TextDirection.ltr;
 
@@ -66,7 +71,6 @@ class _WindowAppPageState  extends State <WindowAppPage>{
   void initState() {
     // TODO: implement initState
     super.initState();
-    _rootWidget = widget.rootWidget;
 
     Application.eventBus.on("setRootWidget", (arg) {
       // do something
@@ -91,15 +95,20 @@ class _WindowAppPageState  extends State <WindowAppPage>{
         _widgetElList.remove(arg);
       });
     });
-
   }
 
   @override
   Widget build(BuildContext context) {
     debugPrint("windowapp buid");
+
     List<Widget> widgetList = [];
 
-    if (_rootWidget != null) widgetList.add(_rootWidget);
+    if (_rootWidget == null) {
+      _rootWidget = widget.windowAppRootCallback(context);
+    }
+
+//    _rootWidget = widget.windowAppRootCallback(context);
+    widgetList.add(_rootWidget);
 
     _widgetElList.forEach((element) {
       if (element is Function) {
@@ -111,6 +120,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
     });
 
     return Scaffold(
+      resizeToAvoidBottomInset:false,
       backgroundColor: Colors.white,
       body:Stack(
         alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式

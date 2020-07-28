@@ -8,9 +8,12 @@ import 'package:flutterfoundation_example/route/AppRouteHelp.dart';
 import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart';
 import 'package:flutterfoundation_example/route/LoginRoutes.dart';
 import 'package:flutterfoundation_example/route/SuccessRoutes.dart';
+import 'package:flutter_page_tracker/flutter_page_tracker.dart';
 
 const String LOGINROUTERID = "LOGINROUTERID";
 const String LOGINSUCCESSROUTERID = "LOGINSUCCESSROUTERID";
+
+
 class NavigatorUtil {
 
   static Map<String,Router> _routeMap = Map();
@@ -29,7 +32,7 @@ class NavigatorUtil {
 
 
   ///获取login根rootview
-  static Widget rootLoginWidget() {
+  static Widget rootLoginWidget(BuildContext context) {
     Router router = _routeMap[LOGINROUTERID];
     if (router == null) {
       router = Router();
@@ -38,6 +41,8 @@ class NavigatorUtil {
 
     }
     Login newroute = Login();
+
+
     Widget rootWidet =  LoginStack(
       alignment: Alignment.center, //指定未定位或部分定位widget的对齐方式
       children: [
@@ -56,7 +61,7 @@ class NavigatorUtil {
   }
 
   ///获取登录成功根rootview
-  static Widget rootLoginSuccessWidget() {
+  static Widget rootLoginSuccessWidget(BuildContext context) {
     Router router = _routeMap[LOGINSUCCESSROUTERID];
     if (router == null) {
       router = Router();
@@ -89,6 +94,10 @@ class NavigatorUtil {
   ///
   static void goAppPage(BuildContext context) {
     _navigateTo(context, LoginRoutes.app);
+  }
+
+  static void goRegisterPage(BuildContext context) {
+    _navigateTo(context, LoginRoutes.register);
   }
 
   ///

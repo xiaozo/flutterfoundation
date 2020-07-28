@@ -7,6 +7,7 @@ import 'LoginRouteHandles.dart';
 class LoginRoutes extends Routes {
   static String login = "/";
   static String app = "/app";
+  static String register = "/register";
   static void configureRoutes(Router router) {
     Routes.configureRoutes(router);
     router.notFoundHandler = new Handler(
@@ -17,6 +18,7 @@ class LoginRoutes extends Routes {
 
     router.define(login, handler: loginHandle);
     router.define(app, handler: appHandle);
+    router.define(register, handler: registerHandle);
 
   }
 }
