@@ -16,7 +16,7 @@ class _TestViewState extends BaseState<TestView> with SingleTickerProviderStateM
   initState() {
     super.initState();
 
-    setupFadeTransition(Duration(milliseconds: 300), Tween(
+    setupFadeTransition(Duration(milliseconds: 700), Tween(
       begin: 0.0,
       end: 1.0,
     ),this);

@@ -58,10 +58,7 @@ class NavigatorUtil {
           ],
 //      supportedLocales: S.delegate.supportedLocales,
           // 设置中文为首选项
-          supportedLocales: const <Locale>[
-            Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),
-            Locale.fromSubtags(languageCode: 'en'),
-          ],
+          supportedLocales: S.delegate.supportedLocales,
           navigatorKey: Application.getIt<NavigateService>().key,
           home: newroute,
           onGenerateRoute: router.generator,
@@ -113,6 +110,10 @@ class NavigatorUtil {
 
   static void goRegisterPage(BuildContext context) {
     _navigateTo(context, LoginRoutes.register);
+  }
+
+  static void goBottomNavigationPage(BuildContext context) {
+    _navigateTo(context, LoginRoutes.bottomNavigation);
   }
 
   ///

@@ -26,7 +26,8 @@ class _LoginState extends BaseState<Login>
 
 //    Application.getIt<NavigateService>().pushNamed("App", arguments: "hi");
 //    Application.windowApp.addWidget(IconButton(icon: Icon(Icons.menu),onPressed: (){}));
-    EasyLoading.show(status: 'loading...');
+
+//    EasyLoading.show(status: 'loading...');
 //    EasyLoading.showSuccess('Great Success!');
 
 //    OverlayEntry _overlayEntry = OverlayEntry(
@@ -57,7 +58,7 @@ class _LoginState extends BaseState<Login>
           },),
         ],
         actions: <Widget>[
-          IconButton(icon: Icon(Icons.menu),onPressed: (){},),
+          IconButton(icon: Icon(Icons.person_add),onPressed: (){},),
           Text("item"),
         ],
         title:Text(S.of(context).denglu),
@@ -92,10 +93,14 @@ class _LoginState extends BaseState<Login>
               textColor: Colors.blue,
               onPressed: () {
                 NavigatorUtil.goRegisterPage(context);
-//                Navigator.push( context,
-//                    MaterialPageRoute(builder: (context) {
-//                      return Register();
-//                    }));
+
+              },
+            ),
+            FlatButton(
+              child: Text("bottomNavigation"),
+              textColor: Colors.blue,
+              onPressed: () {
+                NavigatorUtil.goBottomNavigationPage(context);
 
               },
             ),

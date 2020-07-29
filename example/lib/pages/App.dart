@@ -34,18 +34,9 @@ class _App extends BaseState<App>  {
     print("didChangeDependencies");
     super.didChangeDependencies();
 
-    Widget widget =  FlatButton(
-      color: Colors.red,
-      child: Text("window.rootViewController"),
-      textColor: Colors.blue,
-      onPressed: () {
-        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginSuccessWidget(context));
-      },
-    );
+    Widget widget ;
 
-    addSubView(WidgetAdapter(
-        widgetEl:widget
-    ));
+
 
 //    widget =  Positioned(child: TestView(),left: 30.0,top: 30.0,);
 
@@ -62,10 +53,19 @@ class _App extends BaseState<App>  {
     );
     addSubView(widgetAdapter);
 
-//    addSubView(WidgetAdapter(
-//        widgetEl:testwidget,
-//      arguments: {'top': 200.0}
-//    ));
+    widget =  FlatButton(
+      color: Colors.red,
+      child: Text("window.rootViewController"),
+      textColor: Colors.blue,
+      onPressed: () {
+        Application.windowApp.setRootWidget(NavigatorUtil.rootLoginSuccessWidget(context));
+      },
+    );
+
+    addSubView(WidgetAdapter(
+        widgetEl:widget
+    ));
+
 
   }
 

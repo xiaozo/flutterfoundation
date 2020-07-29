@@ -2,6 +2,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation_example/pages/App.dart';
 import 'package:flutterfoundation_example/pages/Login.dart';
+import 'package:flutterfoundation_example/pages/bottom_navigation.dart';
 import 'package:flutterfoundation_example/pages/register.dart';
 
 var loginHandle = new Handler(
@@ -17,4 +18,9 @@ var appHandle = new Handler(
 var registerHandle = new Handler(
     handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
       return Register();
+    });
+
+var bottomNavigationHandle = new Handler(
+    handlerFunc: (BuildContext context, Map<String, List<Object>> params) {
+      return BottomNavigation();
     });
