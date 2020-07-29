@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/Common/view_bus.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
 
+import 'loading_view.dart';
 import 'widget_adapter.dart';
 
 
@@ -40,57 +41,67 @@ class WidgetMixture {
   List<WidgetAdapter> widgetElList = [];
   List<WidgetAdapter> widgetTopElList = [];
   ViewBus bus = ViewBus();
+  WidgetAdapter _loadingViewAdapter;
+  bool _isLoading = false;
+
+  void showLoading() {
+    if (!_isLoading) {
+      _isLoading = true;
+      if (_loadingViewAdapter == null) {
+        _loadingViewAdapter = WidgetAdapter(
+            depth:2,
+            widgetEl:Positioned(
+                child: LoadingView(),
+              left: 0,right: 0,top: 0,bottom: 0,
+            )
+        );
+      }
+
+      addTopSubView(_loadingViewAdapter);
+    }
+  }
+
+  void hideLoading() {
+    if (_isLoading) {
+      _isLoading = false;
+      removeWidgetAdapter(_loadingViewAdapter);
+    }
+  }
 
   void addSubView(WidgetAdapter widgetAdapter){
-    widgetElList.add(widgetAdapter);
+
+    _addSubView(widgetElList,widgetAdapter);
     update();
   }
 
   void addTopSubView(WidgetAdapter widgetAdapter){
-    widgetTopElList.add(widgetAdapter);
+    _addSubView(widgetTopElList,widgetAdapter);
     update();
   }
 
   void bringTopSubviewToFront(WidgetAdapter widgetAdapter) {
-    if (widgetTopElList.indexOf(widgetAdapter) != -1) {
-      widgetTopElList.remove(widgetAdapter);
-      widgetTopElList.add(widgetAdapter);
-      update();
-    }
-
+    _bringSubviewToFront(widgetTopElList,widgetAdapter);
   }
 
   void sendTopSubviewToBack(WidgetAdapter widgetAdapter) {
-    if (widgetTopElList.indexOf(widgetAdapter) != -1) {
-      widgetTopElList.remove(widgetAdapter);
-      widgetTopElList.insert(0, widgetAdapter);
-      update();
-    }
+    _sendSubviewToBack(widgetTopElList, widgetAdapter);
 
   }
 
 
   void bringSubviewToFront(WidgetAdapter widgetAdapter) {
-    if (widgetElList.indexOf(widgetAdapter) != -1) {
-      widgetElList.remove(widgetAdapter);
-      widgetElList.add(widgetAdapter);
-      update();
-    }
+    _bringSubviewToFront(widgetElList,widgetAdapter);
 
   }
 
   void sendSubviewToBack(WidgetAdapter widgetAdapter) {
-    if (widgetElList.indexOf(widgetAdapter) != -1) {
-      widgetElList.remove(widgetAdapter);
-      widgetElList.insert(0, widgetAdapter);
-      update();
-    }
+   _sendSubviewToBack(widgetElList, widgetAdapter);
 
   }
 
   Widget bodyWidgetBychildbodyWidgetBlock (ChildbodyWidgetBlock childbodyWidgetblock){
-    List<Widget> widgets = __getWidgets(widgetElList);
-    List<Widget> topwidgets = __getWidgets(widgetTopElList);
+    List<Widget> widgets = _getWidgets(widgetElList);
+    List<Widget> topwidgets = _getWidgets(widgetTopElList);
     Widget childbodyWidget = childbodyWidgetblock(widgets);
     topwidgets.insert(0, childbodyWidget);
     return  ConstrainedBox(
@@ -104,7 +115,7 @@ class WidgetMixture {
 
   Widget bodyWidget () {
     widgetTopElList = widgetElList;
-    List<Widget> widgets = __getWidgets(widgetElList);
+    List<Widget> widgets = _getWidgets(widgetElList);
     return  ConstrainedBox(
       constraints: BoxConstraints.expand(),
       child: Stack(
@@ -117,27 +128,15 @@ class WidgetMixture {
 
   void removeWidgetAdapter(WidgetAdapter widgetAdapter) {
     debugPrint("removeWidgetAdapter");
-    widgetElList.remove(widgetAdapter);
-    bus.off(widgetAdapter.eventName);
-    update();
+    bus.emit(widgetAdapter.eventName);
 
   }
-
-  void removeTopWidgetAdapter(WidgetAdapter widgetAdapter) {
-    debugPrint("removeTopWidgetAdapter");
-    widgetTopElList.remove(widgetAdapter);
-    bus.off(widgetAdapter.eventName);
-    update();
-
-  }
-
-
 
   void update() {
 
   }
 
-  List<Widget> __getWidgets (List<WidgetAdapter> elList) {
+  List<Widget> _getWidgets (List<WidgetAdapter> elList) {
     List<Widget> widgets = [];
     bool isTopElList = (elList == widgetTopElList);
     elList.forEach((WidgetAdapter element) {
@@ -183,7 +182,7 @@ class WidgetMixture {
         baseStatefulWidget.viewBus = bus;
         baseStatefulWidget.eventName = eventName;
         bus.on(eventName, (arg) {
-          isTopElList == true ? removeTopWidgetAdapter(element):removeWidgetAdapter(element);
+          isTopElList == true ? _removeWidgetAdapter(widgetTopElList,element):_removeWidgetAdapter(widgetElList,element);
         });
       }
 
@@ -193,7 +192,58 @@ class WidgetMixture {
     return widgets;
   }
 
+  void _addSubView( List<WidgetAdapter> widgetAdapters,WidgetAdapter widgetAdapter) {
+    if (widgetAdapters.length == 0) {
+      widgetAdapters.add(widgetAdapter);
+    } else {
 
+      for (int i = widgetAdapters.length - 1;i >= 0; i--) {
+        WidgetAdapter twidgetAdapter = widgetAdapters[i];
+        if (twidgetAdapter.depth <= widgetAdapter.depth) {
+          widgetAdapters.insert((i + 1), widgetAdapter);
+          break;
+        }
+      }
+    }
 
+  }
+
+  void _sendSubviewToBack(List<WidgetAdapter> widgetAdapters,WidgetAdapter widgetAdapter) {
+    debugPrint("_sendSubviewToBack");
+    if (widgetAdapters.indexOf(widgetAdapter) != -1) {
+      widgetAdapters.remove(widgetAdapter);
+
+      if (widgetAdapters.length == 0) {
+        widgetAdapters.add(widgetAdapter);
+        update();
+      } else {
+        for (int i = 0; i < widgetAdapters.length;i++) {
+          WidgetAdapter twidgetAdapter = widgetAdapters[i];
+          if (twidgetAdapter.depth >= widgetAdapter.depth) {
+            widgetAdapters.insert((i), widgetAdapter);
+            update();
+            break;
+          }
+        }
+      }
+
+    }
+  }
+
+  void _bringSubviewToFront(List<WidgetAdapter> widgetAdapters,WidgetAdapter widgetAdapter) {
+    debugPrint("_sendSubviewToBack");
+    if (widgetAdapters.indexOf(widgetAdapter) != -1) {
+      widgetAdapters.remove(widgetAdapter);
+      _addSubView(widgetAdapters,widgetAdapter);
+      update();
+    }
+  }
+
+  void _removeWidgetAdapter(List<WidgetAdapter> widgetAdapters,WidgetAdapter widgetAdapter) {
+    debugPrint("_removeWidgetAdapter");
+    widgetAdapters.remove(widgetAdapter);
+    bus.off(widgetAdapter.eventName);
+    update();
+  }
 
 }

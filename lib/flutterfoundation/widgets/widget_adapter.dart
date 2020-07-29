@@ -11,10 +11,13 @@ class WidgetAdapter {
   dynamic widgetEl;
   ///生成Widget的函数的参数
   Object arguments;
+  ///层级 值越大越置顶展示
+  int depth;
   WidgetAdapter({
     Key key,
     @required
     this.widgetEl,
+    this.depth = 1,
     this.arguments,
 
   });
