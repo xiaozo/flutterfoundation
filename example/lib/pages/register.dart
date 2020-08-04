@@ -79,9 +79,9 @@ class _RegisterState extends BaseState<Register> with WidgetToolMixture {
 
   }
   @override
-  void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
-    super.didChangeDependencies();
+  void initState() {
+    // TODO: implement initState
+    super.initState();
 
     addSubView(WidgetAdapter(
         widgetEl:_nameWidget));
@@ -91,7 +91,6 @@ class _RegisterState extends BaseState<Register> with WidgetToolMixture {
 
     addSubView(WidgetAdapter(
         widgetEl:_btnWidget));
-
   }
 
   @override

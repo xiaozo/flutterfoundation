@@ -103,11 +103,11 @@ class _WindowAppPageState  extends State <WindowAppPage>{
 
     List<Widget> widgetList = [];
 
+
     if (_rootWidget == null) {
       _rootWidget = widget.windowAppRootCallback(context);
     }
 
-//    _rootWidget = widget.windowAppRootCallback(context);
     widgetList.add(_rootWidget);
 
     _widgetElList.forEach((element) {
@@ -121,7 +121,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
 
     return Scaffold(
       resizeToAvoidBottomInset:false,
-      backgroundColor: Colors.white,
+//      backgroundColor: Colors.white,
       body:Stack(
         alignment:Alignment.center , //指定未定位或部分定位widget的对齐方式
         children:widgetList,

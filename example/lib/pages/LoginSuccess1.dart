@@ -63,13 +63,6 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
         widgetEl:widget3
     ));
   }
-  @override
-  void didChangeDependencies() {
-    print("didChangeDependencies");
-    super.didChangeDependencies();
-
-
-  }
 
   Widget testwidget(obj) {
     Widget widget =  Image(
@@ -102,6 +95,8 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     Widget divider1=Divider(color: Colors.blue,);
     Widget divider2=Divider(color: Colors.green);
     return ListView.separated(
+      shrinkWrap: true,
+      physics: new NeverScrollableScrollPhysics(),
       itemCount: 100,
       //列表项构造器
       itemBuilder: (BuildContext context, int index) {

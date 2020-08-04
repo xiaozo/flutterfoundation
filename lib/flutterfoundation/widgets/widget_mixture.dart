@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/Common/view_bus.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
+import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
 
 import 'loading_view.dart';
 import 'widget_adapter.dart';
@@ -10,7 +11,7 @@ import 'widget_adapter.dart';
 typedef Widget ChildbodyWidgetBlock( List<Widget> widgets);
 
 ///工具
-mixin WidgetToolMixture<T extends StatefulWidget> on State<T> {
+mixin WidgetToolMixture<T extends BaseStatefulWidget> on BaseState<T> {
      void endEditing (){
        FocusScope.of(context).requestFocus(new FocusNode());
      }

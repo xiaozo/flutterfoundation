@@ -13,6 +13,10 @@ import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart
 import 'package:flutter_page_tracker/flutter_page_tracker.dart';
 import 'package:flutterfoundation_example/widgets/loading.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/loading_view.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:flutter/cupertino.dart';
+
+import 'expansion_titlePage.dart';
 
 class Login extends BaseStatefulWidget
 {
@@ -29,6 +33,11 @@ class _LoginState extends BaseState<Login>
   void initState() {
     // TODO: implement initState
     super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((call) {
+      print("addPostFrameCallback");
+    });
+
     addSubView(
         WidgetAdapter(
             widgetEl: FlatButton
@@ -45,7 +54,7 @@ class _LoginState extends BaseState<Login>
       child: Text("test btn"),
       textColor: Colors.blue,
       onPressed: () {
-        __test(context);
+        _test(context);
 
       },
     )));
@@ -77,10 +86,28 @@ class _LoginState extends BaseState<Login>
       },
     )));
 
+    addSubView(WidgetAdapter(widgetEl:FlatButton(
+      child: Text("ExpansionTitlePage"),
+      textColor: Colors.blue,
+      onPressed: () {
+        //导航到新路由
+        Navigator.push( context,
+            MaterialPageRoute(builder: (context) {
+              return ExpansionTitlePage();
+            }));
+
+      },
+    )));
+
     
   }
 
-  void __test(BuildContext context) {
+  void showImagePicker(type) async {
+    var image = await ImagePicker.pickImage(source: type ==1?ImageSource.camera: ImageSource.gallery);
+
+  }
+  void _test(BuildContext context) {
+    showImagePicker(1);
 //    Loading.showLoading(context);
 
 //    Application.getIt<NavigateService>().pushNamed("App", arguments: "hi");
@@ -107,7 +134,6 @@ class _LoginState extends BaseState<Login>
   @override
   Widget build(BuildContext context) {
 
-    EasyLoading.instance.context = context;
     Widget body = bodyWidgetBychildbodyWidgetBlock((widgets) {
 
       return Center(
@@ -120,25 +146,37 @@ class _LoginState extends BaseState<Login>
       );
     });
 
-    return Scaffold(
-      appBar: GradientAppBar(
+    return Container(
+//        decoration:BoxDecoration(
+//            image: DecorationImage(
+//                image: AssetImage("images/1.jpg"),
+//                fit: BoxFit.cover
+//            )
+//        ),
+      child:Scaffold(
+//      backgroundColor: Colors.transparent,
+        appBar: GradientAppBar(
+//        elevation: 0,
+//        backgroundColor: Colors.transparent,
 //        leading:Text("login") ,
-        leadings: <Widget>[
-          IconButton(icon: Icon(Icons.menu),onPressed: (){
-            print(FoundationConfigUntil.navItemSpacing);
-          },),
-        ],
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.person_add),onPressed: (){
-            hideLoading();
-            LoadingView.hideLoading(context);
-          },),
-          Text("item"),
-        ],
-        title:Text(S.of(context).denglu),
+          leadings: <Widget>[
+            IconButton(icon: Icon(Icons.menu),onPressed: (){
+              print(FoundationConfigUntil.navItemSpacing);
+            },),
+          ],
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.person_add),onPressed: (){
+              hideLoading();
+              LoadingView.hideLoading(context);
+            },),
+            Text("item"),
+          ],
+          title:Text(S.of(context).denglu),
+        ),
+        body: body,
       ),
-      body: body,
     );
+//    return ;
   }
 
 }

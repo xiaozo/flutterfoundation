@@ -11,7 +11,7 @@ class BaseStatefulWidget extends StatefulWidget with WidgetRmoveMixture {
   }
 }
 
-class BaseState <T extends BaseStatefulWidget> extends State <T> with WidgetMixture{
+abstract class BaseState <T extends BaseStatefulWidget> extends State <T> with WidgetMixture{
 
   @override
   void dispose() {

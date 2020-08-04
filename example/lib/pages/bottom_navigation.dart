@@ -45,6 +45,31 @@ class _BottomNavigationState extends BaseState<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
+    return Container(
+      decoration:BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/1.jpg"),
+              fit: BoxFit.cover
+          )
+      ),
+      child: Scaffold(
+//        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+//          backgroundColor: Colors.transparent,
+//          elevation: 0,
+          title: Text("底部导航栏"),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          items: bottomNavItems,
+          currentIndex: currentIndex,
+          type: BottomNavigationBarType.fixed,
+          onTap: (index) {
+            _changePage(index);
+          },
+        ),
+        body: pages[currentIndex],
+      ),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text("底部导航栏"),
