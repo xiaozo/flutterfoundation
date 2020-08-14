@@ -33,15 +33,7 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `denglu`
-  String get denglu {
-    return Intl.message(
-      'denglu',
-      name: 'denglu',
-      desc: '',
-      args: [],
-    );
-  }
+
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
@@ -49,9 +41,8 @@ class AppLocalizationDelegate extends LocalizationsDelegate<S> {
 
   List<Locale> get supportedLocales {
     return const <Locale>[
-      Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),
       Locale.fromSubtags(languageCode: 'en'),
-
+      Locale.fromSubtags(languageCode: 'zh', countryCode: 'CN'),
     ];
   }
 

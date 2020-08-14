@@ -1,6 +1,12 @@
 package com.zy.flutterfoundation;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
+
+import com.zy.flutterfoundation.apiRequestUtil.HttpEncryptTool;
+
+import java.util.Map;
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin;
 import io.flutter.plugin.common.MethodCall;
@@ -16,11 +22,13 @@ public class FlutterfoundationPlugin implements FlutterPlugin, MethodCallHandler
   /// This local reference serves to register the plugin with the Flutter Engine and unregister it
   /// when the Flutter Engine is detached from the Activity
   private MethodChannel channel;
+   public static Context mContext;
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
     channel = new MethodChannel(flutterPluginBinding.getFlutterEngine().getDartExecutor(), "flutterfoundation");
     channel.setMethodCallHandler(this);
+      mContext = flutterPluginBinding.getApplicationContext();
   }
 
   // This static function is optional and equivalent to onAttachedToEngine. It supports the old
@@ -35,12 +43,32 @@ public class FlutterfoundationPlugin implements FlutterPlugin, MethodCallHandler
   public static void registerWith(Registrar registrar) {
     final MethodChannel channel = new MethodChannel(registrar.messenger(), "flutterfoundation");
     channel.setMethodCallHandler(new FlutterfoundationPlugin());
+      mContext = registrar.context();
   }
 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
       result.success("Android " + android.os.Build.VERSION.RELEASE);
+    } else if (call.method.equals("httpRequestEncrypt")) {
+     Map<String,Object> arg = (Map<String, Object>) call.arguments;
+     String function = (String) arg.get("function");
+      String systemRequesId = (String) arg.get("systemRequesId");
+      String networkRequestAPiKey = (String) arg.get("networkRequestAPiKey");
+      String systemNetworkAesKey = (String) arg.get("systemNetworkAesKey");
+      String userId = (String) arg.get("userId");
+      Map<String,Object> inputData = (Map<String, Object>) arg.get("inputData");
+      Map<String,Object> expand = (Map<String, Object>) arg.get("expand");
+      Map<String, Object> body = HttpEncryptTool.encodingJsonNetworkDataWithFunction(
+              function,
+              systemRequesId,
+              networkRequestAPiKey,
+              systemNetworkAesKey,
+              userId,
+              inputData,
+              expand);
+      result.success(body);
+
     } else {
       result.notImplemented();
     }

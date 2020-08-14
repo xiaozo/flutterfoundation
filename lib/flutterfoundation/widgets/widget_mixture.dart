@@ -108,7 +108,7 @@ class WidgetMixture {
     return  ConstrainedBox(
       constraints: BoxConstraints.expand(),
       child: Stack(
-        alignment:Alignment.topLeft , //指定未定位或部分定位widget的对齐方式
+//        alignment:Alignment.topLeft , //指定未定位或部分定位widget的对齐方式
         children: topwidgets,
       ),
     );

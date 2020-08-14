@@ -23,7 +23,7 @@ class Application {
   static Future init(
       {
         ///参数配置文件  如控件的一些颜色 间距
-        FoundationConfig foundationConfig = null,
+        FoundationConfig foundationConfig,
       }) async {
 //    sp = await SharedPreferences.getInstance();
     eventBus = new EventBus();
