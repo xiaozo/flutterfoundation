@@ -10,10 +10,56 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ac134d-15ce-409d-b74c-d4d38799dd8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/android/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/android/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/Login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/Login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/route/LoginRoutes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/route/LoginRoutes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/route/SuccessRoutes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/route/SuccessRoutes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/untils/navigator_util.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/untils/navigator_util.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/application.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/application.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/routes/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/generated/intl/messages_all.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/generated/intl/messages_en.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/generated/intl/messages_zh_CN.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/generated/l10n.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/l10n/intl_en.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/l10n/intl_zh_CN.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/pages/Login.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/pages/Login.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/pages/register.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/pages/register.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/route/LoginRoutes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/route/LoginRoutes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/route/SuccessRoutes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/route/SuccessRoutes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/untils/navigator_util.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/untils/navigator_util.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutterfoundation/application.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutterfoundation/application.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutterfoundation/routes/routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutterfoundation/routes/routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/intl/messages_all.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/intl/messages_en.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/intl/messages_zh_CN.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/generated/l10n.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_en.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/l10n/intl_zh_CN.arb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +69,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="HBSBB18917514872" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[HBSBB18917514872]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -35,24 +81,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="88" />
-    <option name="y" value="53" />
-    <option name="width" value="1775" />
-    <option name="height" value="941" />
-  </component>
   <component name="ProjectId" id="1gOnCtR1NYgB88Yp1srYEEXPKBs" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -85,27 +128,43 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="WindowStateProjectService">
-    <state x="426" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597994908375">
+    <state x="693" y="296" key="AndroidProcessChooserDialog" timestamp="1606903416365">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="426" y="200" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1057@0.23.1920.1057" timestamp="1597994908375" />
-    <state x="463" y="177" key="SettingsEditor" timestamp="1597995195395">
+    <state x="693" y="296" key="AndroidProcessChooserDialog/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606903416365" />
+    <state width="797" height="244" key="GridCell.Tab.0.bottom" timestamp="1606904370236">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="463" y="177" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1597995195395" />
-    <state x="615" y="294" width="731" height="488" key="find.popup" timestamp="1597995259967">
+    <state width="797" height="247" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606561649911" />
+    <state width="797" height="244" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606904370236" />
+    <state width="797" height="244" key="GridCell.Tab.0.center" timestamp="1606904370236">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="615" y="294" width="731" height="488" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1597995259967" />
+    <state width="797" height="247" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606561649911" />
+    <state width="797" height="244" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606904370236" />
+    <state width="797" height="244" key="GridCell.Tab.0.left" timestamp="1606904370235">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="797" height="247" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606561649910" />
+    <state width="797" height="244" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606904370235" />
+    <state width="797" height="244" key="GridCell.Tab.0.right" timestamp="1606904370236">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="797" height="247" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606561649911" />
+    <state width="797" height="244" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606904370236" />
+    <state x="386" y="174" key="SettingsEditor" timestamp="1606900008479">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="386" y="174" key="SettingsEditor/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606900008479" />
+    <state width="500" height="467" key="SwitcherDM" timestamp="1606550675426">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state width="500" height="467" key="SwitcherDM/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606550675426" />
+    <state x="615" y="294" width="731" height="490" key="find.popup" timestamp="1606877026623">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1305" y="294" width="731" height="490" key="find.popup/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606549278862" />
+    <state x="615" y="294" width="731" height="490" key="find.popup/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606877026623" />
   </component>
 </project>

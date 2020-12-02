@@ -9,7 +9,7 @@ class SuccessRoutes extends Routes {
   static String loginSuccess = "/";
   static String loginSuccess1 = "/loginSuccess1";
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     Routes.configureRoutes(router);
     router.notFoundHandler = new Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {

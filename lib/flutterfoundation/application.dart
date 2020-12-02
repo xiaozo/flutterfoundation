@@ -13,7 +13,7 @@ typedef ApplicationInitHandle();
 
 class Application {
   static GlobalKey<NavigatorState> key = GlobalKey();
-  static Router router;
+  static FluroRouter router;
   static WindowApp windowApp;
   static EventBus eventBus;
   static GetIt getIt = GetIt.instance;

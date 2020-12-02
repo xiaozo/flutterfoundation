@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/widget_mixture.dart';
-import 'package:flutterfoundation/generated/l10n.dart';
 
 class Register extends BaseStatefulWidget {
   @override

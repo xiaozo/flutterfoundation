@@ -5,7 +5,6 @@ import 'package:flutterfoundation/flutterfoundation.dart';
 import 'package:flutterfoundation/flutterfoundation/application.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/base_state.dart';
 import 'package:flutterfoundation/flutterfoundation/widgets/widget_adapter.dart';
-import 'package:flutterfoundation/generated/l10n.dart';
 import 'package:flutterfoundation_example/nets/net_utils.dart';
 import 'package:flutterfoundation_example/pages/WebViewExample.dart';
 import 'package:flutterfoundation_example/pages/register.dart';

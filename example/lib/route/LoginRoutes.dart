@@ -10,7 +10,7 @@ class LoginRoutes extends Routes {
   static String register = "/register";
   static String bottomNavigation = "/bottomNavigation";
 
-  static void configureRoutes(Router router) {
+  static void configureRoutes(FluroRouter router) {
     Routes.configureRoutes(router);
     router.notFoundHandler = new Handler(
         handlerFunc: (BuildContext context, Map<String, List<String>> params) {
