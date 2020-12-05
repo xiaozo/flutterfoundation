@@ -15,7 +15,7 @@ void main() {
     NetUtils.init("http://dev-ip.thedeer.cn:91/zykj-api/userapp/");
     Application.getIt.registerSingleton(SuccessNavigateService());
     Widget windowApp = WindowApp(windowAppRootCallback: (BuildContext context) {
-
+      ScreenUtil.init(context, width: 414, height: 736);
       Widget rootWidget = NavigatorUtil.rootLoginWidget(context);
      return rootWidget;
 

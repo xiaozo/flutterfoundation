@@ -96,7 +96,7 @@ class _LoginSuccess1 extends BaseState<LoginSuccess1> with SingleTickerProviderS
     Widget divider2=Divider(color: Colors.green);
     return ListView.separated(
       shrinkWrap: true,
-      physics: new NeverScrollableScrollPhysics(),
+      physics: new AlwaysScrollableScrollPhysics(),
       itemCount: 100,
       //列表项构造器
       itemBuilder: (BuildContext context, int index) {

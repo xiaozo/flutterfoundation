@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-
 import 'application.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart';
 
 typedef Widget WindowAppRootCallback(BuildContext context);
 
@@ -101,6 +101,9 @@ class _WindowAppPageState  extends State <WindowAppPage>{
   Widget build(BuildContext context) {
     debugPrint("windowapp buid");
 
+    if (FoundationConfigUntil.screenUtilWidth > 0 && FoundationConfigUntil.screenUtilHeight > 0)  {
+      ScreenUtil.init(context, width: FoundationConfigUntil.screenUtilWidth, height: FoundationConfigUntil.screenUtilHeight);
+    }
     List<Widget> widgetList = [];
 
 
