@@ -10,11 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ac134d-15ce-409d-b74c-d4d38799dd8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/LoginSuccess1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/example/lib/pages/LoginSuccess1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/FlutterfoundationPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/FlutterfoundationPlugin.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/AES/AESCbc.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/AES/AESCbc.m" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/HttpEncryptTool.h" beforeDir="false" />
@@ -24,9 +19,6 @@
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.m" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/PublicRequestDefine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/window_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/lib/flutterfoundation/window_app.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/pages/LoginSuccess1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/pages/LoginSuccess1.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterfoundationPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterfoundationPlugin.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/AES/AESCbc.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/AES/AESCbc.m" beforeDir="false" />
@@ -37,8 +29,6 @@
       <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.m" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/PublicRequestDefine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutterfoundation/foundation_config_until.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutterfoundation/foundation_config_until.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/flutterfoundation/window_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutterfoundation/window_app.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
