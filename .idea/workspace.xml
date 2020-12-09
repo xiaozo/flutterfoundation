@@ -10,25 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0ac134d-15ce-409d-b74c-d4d38799dd8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/AES/AESCbc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/AES/AESCbc.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/HttpEncryptTool.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/HttpEncryptTool.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSData+Base64/NSData+base64Encoding.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSData+Base64/NSData+base64Encoding.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/ios/Classes/IosApiRequestUtil/PublicRequestDefine.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterfoundationPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterfoundationPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/AES/AESCbc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/AES/AESCbc.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/HttpEncryptTool.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/HttpEncryptTool.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSData+Base64/NSData+base64Encoding.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSData+Base64/NSData+base64Encoding.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/NSString+ZLKExtend.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/IosApiRequestUtil/PublicRequestDefine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/.symlinks/plugins/flutterfoundation/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +21,7 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[HBSBB18917514872]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[420cb1c49b638419]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -103,26 +86,26 @@
     </state>
     <state x="-1227" y="296" key="AndroidProcessChooserDialog/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1606966857046" />
     <state x="693" y="296" key="AndroidProcessChooserDialog/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1606903416365" />
-    <state width="797" height="244" key="GridCell.Tab.0.bottom" timestamp="1607134458838">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="797" height="244" key="GridCell.Tab.0.bottom" timestamp="1607399917817">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="797" height="244" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1607134458838" />
-    <state width="985" height="302" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607072503014" />
-    <state width="797" height="244" key="GridCell.Tab.0.center" timestamp="1607134458838">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="797" height="244" key="GridCell.Tab.0.bottom/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607399917817" />
+    <state width="797" height="244" key="GridCell.Tab.0.center" timestamp="1607399917817">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="797" height="244" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1607134458838" />
-    <state width="985" height="302" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607072503014" />
-    <state width="797" height="244" key="GridCell.Tab.0.left" timestamp="1607134458837">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="797" height="244" key="GridCell.Tab.0.center/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607399917817" />
+    <state width="797" height="244" key="GridCell.Tab.0.left" timestamp="1607399917816">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="797" height="244" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1607134458837" />
-    <state width="985" height="302" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607072503013" />
-    <state width="797" height="244" key="GridCell.Tab.0.right" timestamp="1607134458838">
-      <screen x="-1920" y="23" width="1920" height="1057" />
+    <state width="797" height="244" key="GridCell.Tab.0.left/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607399917816" />
+    <state width="797" height="244" key="GridCell.Tab.0.right" timestamp="1607399917817">
+      <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="797" height="244" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.23.1920.1057@-1920.23.1920.1057" timestamp="1607134458838" />
-    <state width="985" height="302" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607072503014" />
+    <state width="797" height="244" key="GridCell.Tab.0.right/0.23.1920.1057/-1920.23.1920.1057@0.23.1920.1057" timestamp="1607399917817" />
     <state x="386" y="174" key="SettingsEditor" timestamp="1606900008479">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
