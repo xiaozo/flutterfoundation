@@ -100,6 +100,9 @@ class WidgetMixture {
 
   }
 
+ List<Widget> subViews() {
+    return _getWidgets(widgetElList);
+ }
   Widget bodyWidgetBychildbodyWidgetBlock (ChildbodyWidgetBlock childbodyWidgetblock){
     List<Widget> widgets = _getWidgets(widgetElList);
     List<Widget> topwidgets = _getWidgets(widgetTopElList);
