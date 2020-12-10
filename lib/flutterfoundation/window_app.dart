@@ -101,9 +101,14 @@ class _WindowAppPageState  extends State <WindowAppPage>{
   Widget build(BuildContext context) {
     debugPrint("windowapp buid");
 
+    MediaQueryData queryData;
+    queryData = MediaQuery.of(context);
+    Application.scale = queryData.devicePixelRatio;
+
     if (FoundationConfigUntil.screenUtilWidth > 0 && FoundationConfigUntil.screenUtilHeight > 0)  {
       ScreenUtil.init(context, width: FoundationConfigUntil.screenUtilWidth, height: FoundationConfigUntil.screenUtilHeight);
     }
+
     List<Widget> widgetList = [];
 
 

@@ -18,6 +18,7 @@ dependencies:
   get_it: ^3.0.3
   dio: ^3.0.9
   flustars: ^0.3.2
+  path_provider: ^1.6.24
   fluro:
     git:
       url: 'https://github.com/lukepighetti/fluro.git'

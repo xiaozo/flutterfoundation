@@ -2,6 +2,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfoundation/flutterfoundation/foundation_config_until.dart';
 import 'package:flutterfoundation/flutterfoundation/routes/navigate_service.dart';
+import 'package:flutterfoundation/flutterfoundation/untils/native_image_provider.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -16,6 +17,7 @@ class Application {
   static FluroRouter router;
   static WindowApp windowApp;
   static EventBus eventBus;
+  static double scale;
   static GetIt getIt = GetIt.instance;
   static SharedPreferences sp;
 
