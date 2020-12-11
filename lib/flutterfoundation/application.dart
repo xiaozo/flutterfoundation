@@ -14,6 +14,7 @@ typedef ApplicationInitHandle();
 
 class Application {
   static GlobalKey<NavigatorState> key = GlobalKey();
+  static BuildContext context;
   static FluroRouter router;
   static WindowApp windowApp;
   static EventBus eventBus;
@@ -33,7 +34,6 @@ class Application {
     if (foundationConfig == null) foundationConfig = FoundationConfig();
 
     getIt.registerSingleton(foundationConfig);
-
   }
 
   static initSp() async {

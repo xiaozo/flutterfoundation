@@ -104,6 +104,7 @@ class _WindowAppPageState  extends State <WindowAppPage>{
     MediaQueryData queryData;
     queryData = MediaQuery.of(context);
     Application.scale = queryData.devicePixelRatio;
+    Application.context = context;
 
     if (FoundationConfigUntil.screenUtilWidth > 0 && FoundationConfigUntil.screenUtilHeight > 0)  {
       ScreenUtil.init(context, width: FoundationConfigUntil.screenUtilWidth, height: FoundationConfigUntil.screenUtilHeight);
